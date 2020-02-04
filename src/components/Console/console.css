@@ -1,0 +1,8 @@
+.console {
+    position: absolute;
+    right: 1px;
+    width: 80vw;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
