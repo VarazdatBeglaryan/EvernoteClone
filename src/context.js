@@ -12,7 +12,7 @@ const Provider = ({ children }) => {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, []);
 
     const setNote = (note) => {
         if (note.id === undefined) {

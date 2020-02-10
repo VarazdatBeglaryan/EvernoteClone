@@ -30,11 +30,13 @@ const Console = () => {
     const updateBody = (value) => {
         setText(value)
     }
-
     return (
         <>
             {
-                currentNote.id ? <ReactQuill className="console" value={text || currentNote.text} onChange={value => updateBody(value)}></ReactQuill> : null
+                currentNote.text == '<p>All notes are available for everyone</p>'
+                    ? currentNote.id ? <ReactQuill className="console" value={text || currentNote.text} ></ReactQuill> : null
+                    : currentNote.id ? <ReactQuill className="console" value={text || currentNote.text} onChange={value => updateBody(value)}></ReactQuill> : null
+
             }
         </>
     )

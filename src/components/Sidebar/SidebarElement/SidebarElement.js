@@ -51,7 +51,9 @@ const SidebarElement = ({ note, setNote, noteIndex, deleteNote, changeTitle }) =
                 <div onDoubleClick={() => setIsTitleChanging(true)} className="sidebar__element-title">{isTitleChanging ? <input onKeyPress={e => titleHandler(e)} className="sidebar__element-input" value={title} onChange={e => setTitle(e.target.value)} /> : title}</div>
                 <div className="sidebar__element-prev">{removeHTMLTags(note.text.substring(0, 30)) + '...'}</div>
             </section>
-            <div onClick={(e) => deleteCurrentNote(e, note)} className="icon"><FaTrash /></div>
+            {
+                title == "Info" ? null : <div onClick={(e) => deleteCurrentNote(e, note)} className="icon"><FaTrash /></div>
+            }
         </div>
     )
 }
